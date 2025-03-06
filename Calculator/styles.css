@@ -1,0 +1,104 @@
+/*
+  ChatGPT lang po 'tong design sir tinatamad ako mag design ih
+  sana ok lang po hihi 
+*/
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c35;
+}
+
+#calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #3e444f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    position: relative;
+}
+
+#result {
+    grid-column: span 4;
+    width: 94%;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #5a636e;
+    color: #fff;
+    text-align: right;
+    outline: none;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #474d58;
+    color: #fff;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #616773;
+}
+
+button:active {
+    background-color: #3e444f;
+}
+
+#Equal, #AC, #Del {
+    background-color: #f5923e;
+    color: #fff;
+}
+
+#Dot {
+    background-color: #474d58;
+    color: #fff;
+}
+
+#Dot:hover {
+    background-color: #616773;
+}
+
+#Equal:hover, #AC:hover, #Del:hover {
+    background-color: #f7bb87;
+}
+
+#Equal {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 42%;
+}
+
+#AC {
+    width: 225%;
+}
+
+#status {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+}
