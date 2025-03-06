@@ -1,0 +1,126 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('your-background-image.jpg'); /* Add your background image URL or adjust the colors */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white; /* Text color */
+    overflow: hidden; /* Hide horizontal scrollbar due to animated background */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: -1;
+}
+
+.message {
+    background: linear-gradient(to bottom, #3498db, #2980b9); /* Gradient background */
+    color: white;
+    padding: 40px;
+    border-radius: 20px; /* Larger border-radius for rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 80%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.message:hover {
+    transform: scale(1.05); /* Zoom in on hover */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Larger font size for emphasis */
+}
+
+p {
+    font-size: 1.4em; /* Larger font size for better readability */
+    line-height: 1.6;
+}
+
+#timer {
+    font-size: 1.8em; /* Larger font size for the countdown timer */
+    margin-top: 20px;
+    color: #ecf0f1; /* Timer text color */
+}
+
+.cancel-button {
+    background-color: #e74c3c; /* Red background color for the cancel button */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-top: 20px;
+    font-size: 1.2em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cancel-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly zoom in on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+  /* Add decorative patterns to the background with a parallax effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.05), transparent 30%), url('your-pattern-image.png'); /* Add your pattern image URL */
+    pointer-events: none;
+    z-index: -1;
+    animation: backgroundAnimation 30s infinite linear;
+}
+
+@keyframes backgroundAnimation {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+}
+
+  /* Add background particle animation */
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform-origin: center;
+    animation: particleAnimation 5s infinite linear;
+}
+
+@keyframes particleAnimation {
+    from {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) scale(2) rotate(360deg);
+    }
+}
