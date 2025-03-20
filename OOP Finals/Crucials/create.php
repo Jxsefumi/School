@@ -1,16 +1,16 @@
 <?php
 include ('connect.php');
 
-
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$product_name = $_POST["product_name"];
-	$price = $_POST["price"];
-
+	$id = $_POST["id"];
+	$title = $_POST["title"];
+	$author = $_POST["author"];
+	$date = $_POST["date"];
+	$pages = $_POST["pages"];
 
 	$con->execute_query(
-		"INSERT INTO products (product_name, price) VALUES (?, ?)",
-		[$product_name, $price]
+		"INSERT INTO books VALUES (?, ?, ?, ?, ?)",
+		[$id, $title, $author, $date, $pages]
 	);
 }
 
@@ -33,9 +33,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <a href="index.php">Back</a> <br>
 <h3>Register</h3>
 <form method="POST">
-	<label>Product Name:</label><input name="product_name" required><br>
-	<label>Price:</label><input name="price" required><br>
-	<button>Input</button>
+	<label>ID:</label><input name="id" required><br>
+	<label>Title:</label><input name="title" required><br>
+	<label>Author:</label><input name="author" required><br>
+	<label>Date:</label><input name="date"><br>
+	<label>Pages:</label><input name="pages"><br>
+	<button>Register</button>
 </form>
 </body>
 </html>
