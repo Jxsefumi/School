@@ -5,7 +5,7 @@ function updateTimer() {
   countdown--;
 
   if (countdown < 0) {
-    window.location.href = '../index.html'; // Replace 'index.html' with the actual path to your main index page
+    window.location.href = '../index.php'; // Replace 'index.html' with the actual path to your main index page
   } else {
     setTimeout(updateTimer, 1000);
   }

@@ -225,7 +225,8 @@ img {
     background-color: orange;
     padding: 40px 10px;
 }
-input[type=text], select {
+
+input[type=text], input[type=number], input[type=email], select {
     width: 50%;
     padding: 12px 20px;
     margin-top: 8px;
@@ -235,6 +236,13 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
   }
 
   input[type=submit] {
@@ -248,6 +256,23 @@ input[type=text], select {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+  }
+
+  /* #b1 {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 25%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  } */
+
+  #b1:hover {
+    background-color: #45a049;
   }
 
   input[type=submit]:hover {
@@ -584,3 +609,4 @@ input[type=cancel] {
         margin-bottom: 10px;
     }
 }
+
